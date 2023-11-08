@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { command: "Cracking encryption", progress: 10 },
             { command: "Bypassing security", progress: 50 },
             { command: "Executing code", progress: 60 },
-            { command: "Cooking Cookies", progress: 70 }
+            { command: "Cooking Cookies", progress: 100 }
         ];
 
         let index = 0;
