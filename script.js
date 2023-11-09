@@ -53,20 +53,47 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.style.width = '0%';
     }
 
+    function listSkills() {
+        const skills = [
+            "python.py",
+            "pandas.py",
+            "javascript.js",
+            "index.html",
+            "styles.css",
+            "c#.cs",
+            "query.sql"
+        ];
+
+        // Añadido un espacio antes de la lista de habilidades
+        const spaceElement = document.createElement('p');
+        spaceElement.textContent = '';
+        outputContainer.appendChild(spaceElement);
+
+        skills.forEach(skill => {
+            const skillElement = document.createElement('p');
+            skillElement.textContent = skill;
+            outputContainer.appendChild(skillElement);
+        });
+    }
+
     commandInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
             const command = commandInput.value;
             const outputElement = document.createElement('p');
-            outputElement.textContent = `$ ${command}`;
+            outputElement.textContent = `henfray@DESKTOP-MAUROF:~$ ${command}`;
             outputContainer.appendChild(outputElement);
             commandInput.value = '';
             outputContainer.scrollTop = outputContainer.scrollHeight;
 
-            // Verificar si el comando es 'clear'
-            if (command.trim().toLowerCase() === 'clear') {
-                isClearing = true;
-                setTimeout(clearTerminal, 0); // Ejecutar limpieza después de que se complete el evento actual
+            switch (command.trim().toLowerCase()) {
+                case 'clear':
+                    isClearing = true;
+                    setTimeout(clearTerminal, 0);
+                    break;
+                case 'skills':
+                    listSkills();
+                    break;
             }
         }
     });
