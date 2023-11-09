@@ -11,25 +11,25 @@ document.addEventListener('DOMContentLoaded', function() {
             { command: "Cracking encryption", progress: 10 },
             { command: "Bypassing security", progress: 50 },
             { command: "Executing code", progress: 60 },
-            { command: "Cooking Cookies", progress: 100 }
+            { command: "Cooking Cookies", progress: 100}
         ];
-
+    
         let index = 0;
-
+    
         function executeCommand() {
             if (index < commands.length) {
                 const command = commands[index].command;
                 const progress = commands[index].progress;
-
+    
                 const outputElement = document.createElement('p');
-                outputElement.textContent = `$ ${command}`;
+                outputElement.textContent = `henfray@DESKTOP-MAUROF:~$ ${command}`;
                 outputContainer.appendChild(outputElement);
-
+    
                 let progressValue = 0;
                 const progressInterval = setInterval(() => {
                     progressValue += 1;
                     progressBar.style.width = `${progressValue}%`;
-
+    
                     if (progressValue >= progress) {
                         clearInterval(progressInterval);
                         index++;
@@ -43,9 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
-
+    
         executeCommand();
     }
+    
 
     function clearTerminal() {
         outputContainer.innerHTML = '';
