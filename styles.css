@@ -35,9 +35,12 @@ body {
 
 .title-text {
     color: #fff;
-    margin-left: 10px;
-    flex-grow: 1; /* Hace que el texto ocupe el espacio restante */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    flex-grow: 1;
 }
+
 
 
 .title-bar-btn {
