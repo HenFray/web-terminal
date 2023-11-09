@@ -13,7 +13,7 @@ This is a simple web-based terminal emulator inspired by the Linux command line 
 
 ## Demo
 
-You can try out the [Web Terminal demo here](https://henfray.github.io/web-terminal/).
+You can try out the [Web Terminal demo here](https://web-terminal-hazel.vercel.app/).
 
 ## Getting Started
 
