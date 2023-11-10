@@ -51,7 +51,7 @@ body {
 }
 
 .title-bar-btn.close {
-    background-color: #27c93f; /* Botón de cerrar */
+    background-color: #ff5f56; /* Botón de cerrar */
 }
 
 .title-bar-btn.minimize {
@@ -59,7 +59,7 @@ body {
 }
 
 .title-bar-btn.maximize {
-    background-color: #ff5f56; /* Botón de maximizar */
+    background-color: #27c93f; /* Botón de maximizar */
 }
 
 .output {
